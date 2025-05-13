@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.bg-cover {
+    background-size: cover;
+    background-position: center;
+}
+
+.chat-window {
+    height: 70%;
+    width: 35%;
+    border-radius: 15px;
+}
+.chat-content {
+    height: 400px;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: #F5F5F5;
+}
+
+.message {
+    max-width: 70%;
+    padding: 10px 15px;
+    border-radius: 15px;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.user-message {
+    background-color: #007BFF;
+    color: white;
+    border-bottom-right-radius: 0;
+}
+
+.bot-message {
+    background-color: #E9ECEF;
+    color: black;
+    border-bottom-left-radius: 0;
+}
+
+.card-footer {
+    background-color: white;
+    border-top: 1px solid #E9ECEF;
+}
+
+.input-group .form-control {
+    border-radius: 20px 0 0 20px;
+}
+
+.input-group .btn {
+    border-radius: 0 20px 20px 0;
+}
+  /* Adiciona animação de digitação */
+  .typing-indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #aaa;
+    animation: typing 1s infinite;
+}
+
+@keyframes typing {
+    0% { transform: scale(0.5); opacity: 0.5; }
+    50% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(0.5); opacity: 0.5; }
+}
+
+.bot-message {
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.user-message {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
