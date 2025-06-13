@@ -7,6 +7,8 @@
 
 O **Trellozinho** é um assistente virtual inteligente construído com LangChain, projetado para interagir com usuários em **português** e fornecer suporte especializado ao uso do **Trello**. Ele entende comandos naturais, consulta dados via API e respeita regras específicas para garantir respostas úteis e precisas.
 
+![image](https://github.com/user-attachments/assets/bc4a0f08-ddff-4670-8053-49e85f39786b)
+
 ---
 
 ## 📌 Funcionalidades
