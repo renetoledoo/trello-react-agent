@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify,  render_template, request
 from main import chamarChat
 from flask_cors import CORS
 
@@ -18,6 +18,10 @@ def invokeChat():
      return(response), 200
 
 
+@app.route('/', methods=['GET'])
+def inicio():
+   return render_template('index.html')
 
-app.run(port=2020)
 
+if __name__ == "__main__":
+    app.run(port=2020, debug=True)

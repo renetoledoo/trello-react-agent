@@ -6,8 +6,9 @@ from langchain.agents import create_react_agent, AgentExecutor
 from langchain.callbacks import get_openai_callback
 import tools as ferramentas
 from decouple import config
-os.environ['OPENAI_API_KEY'] = config('OPENAI_API_KEY')
 
+
+os.environ['OPENAI_API_KEY'] = config('OPENAI_API_KEY')
 model = ChatOpenAI(model='gpt-4', temperature=0)
 
 
@@ -29,7 +30,9 @@ Parâmetro: {id}
 Regra mais importante: Caso não entenda a pergunta, peça educadamente repetir de forma clara e objetiva.
 
 Regras:
+- Quando o resultado for uma lista, utilize tags HTML para apresentar de forma organizada, como <ul><li>...</li></ul>.
 - Sempre responder em português brasileiro.
+-  Nunca escreva os projetos em uma única linha. Cada projeto deve ser uma nova linha com tag `<li>`.
 - Para perguntas informais ou casuais, apenas forneça uma resposta amigável sem recorrer às ferramentas do Trello.
 
 '''

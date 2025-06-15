@@ -2,9 +2,10 @@ import requests
 import json
 from decouple import config
 
+
 API_KEY = config('API_KEY')
 TOKEN = config('TOKEN')
-
+KEY =  config('KEY')
 query = {
     'key': API_KEY,
     'token': TOKEN
@@ -109,16 +110,17 @@ def procurar_trello(query_search):
     return json.dumps(json.loads(response.text), sort_keys=True, indent=4, separators=(",", ": "))
 
 def obter_projetos(args):
-    
-    url = "https://api.trello.com/1/members/me/boards?fields=name,url&key=9c9f2b5bc442a327d568318c4da36510&token=ATTAb167c83142f17343b26c915ace3f71c7c90a5c29b739e4a96b061095e306178eEE3CDEE1"
-    payload = {}
-    headers = {
-    'Cookie': 'dsc=2751185446e2fc2cf648e59d4515a61310f95fad49ba0ad83319280d081ee6cc'
+    url = "https://api.trello.com/1/members/me/boards"
+    params = {
+        "fields": "name,url",
+        "key": KEY,
+        "token": TOKEN
     }
-
-    response = requests.request("GET", url, headers=headers, data=payload)
+    headers = {
+        "Accept": "application/json"
+    }
+    response = requests.get(url, headers=headers, params=params)
     return response.text
-
 
 
 def obter_membros_projeto(id_projeto):
