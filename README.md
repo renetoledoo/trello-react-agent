@@ -10,6 +10,7 @@
 ## 🚀 Sobre o Projeto
 
 O **Trellozinho** é um assistente virtual inteligente que interage com a API do Trello usando comandos em linguagem natural em português. Ideal para automatizar consultas e operações em quadros de projeto.
+![image](https://github.com/user-attachments/assets/77f8f6a3-5b30-4c71-9b9f-232b70361184)
 
 ## 🛠 Tecnologias
 
